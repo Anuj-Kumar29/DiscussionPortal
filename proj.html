@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Portal</title>
+    <style> 
+    #question-body {
+            display: none;
+        }
+        #respond-question-form {
+            display: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #0d0e0ede;
+            padding: 20px;
+            color: white;
+        }
+        button{
+             background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                /* cursor: pointer; */
+                border-radius: 5px;
+
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .left-container, .right-container {
+            padding: 20px;
+            width: 48%;
+            background-color: rgb(247, 250, 252);
+       border-radius: 5px;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+          .left-container >div{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                border-bottom: 1px solid #ccc;
+            }
+             #add-question-form {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+            #add-question-form button{
+                align-self: flex-end;
+            }
+
+        .Queries {
+            margin-top: 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .post {
+            border: 1px solid #252323;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+          input[type="text"], input[type="search"],textarea {
+                width: 250px;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #f7eeee;
+                border-radius: 5px;
+            }
+            textarea{
+                width:97%;
+                height: 100px;
+            }
+            #questions {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .question-item {
+                background-color: #f9f9f9;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                /* cursor: pointer; */
+            }
+
+         .question-item:hover {
+                background-color: #e9ecef;
+            }
+            .question {
+                margin-bottom: 20px;
+                background-color: #ccc;
+            }
+            .responses {
+                margin-top: 20px;
+                border-top: 1px solid #ccc;
+                padding-top: 10px;
+            }
+            .responses div {
+                margin-bottom: 10px;
+            }
+            .responses strong {
+                color: #007bff;
+            }
+
+    </style>
+</head>
+<body>
+   <nav>
+    <h1>Discussion Portal</h1>
+    </nav>
+    <main class="container">
+        <div class="left-container">
+            <div>
+                <button>Add query</button>
+                
+                <input type="search" placeholder="Search Query"/>
+            </div>
+            <div id="questions">
+
+            </div>
+        </div>
+        <div class="right-container">
+            <form id="add-question-form">
+                <h2>Welcome to Discussion Portal!</h2>
+                <h4>Enter a subject and questions to get started</h4>
+                <input type="text" name="title" placeholder="Enter Heading"/><br>
+                <textarea name="body" placeholder="Query"></textarea><br>
+                <button type="submit">Add query</button>
+            </form>
+            <div id="question-body">
+                <div class="questions">
+                    
+                    
+                    <button>Resolve</button>
+                </div>
+                <div class="Responses">
+                </div>
+            </div>
+            <form id="respond-question-form">
+                <h3>Respond to the query</h3>
+                <input type="text" name="name" placeholder="Enter your name"/>
+                <textarea  placeholder="Enter your response"></textarea>
+                <button type="submit">Submit Response</button>
+        </div>
+    </main>
+   
+    <script src="proj.js"></script>
+</body>
+</html>

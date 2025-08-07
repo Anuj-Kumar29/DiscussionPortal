@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Discussion Portal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h1>Discussion Portal</h1>
+        </nav>
+        <main class="container">
+            <div class="left-container">
+                <div>
+                    
+                    <button id="add-question-button">Add Question</button>
+                    <input type="text" id="search-input" placeholder="Search Question..." oninput="displayFilteredQuestions()"/>
+                </div>
+                <div id="questions">
+
+                </div>
+            </div>
+            <div class="right-container">
+                <form id="add-question-form" >
+                    <h2>Welcome to Discussion Portal</h2>
+                    <h5>Enter a subject and question to get started</h5>
+                    <input type="text" name="subject" placeholder="Enter Subject..." maxlength=" 50" required/>
+                    <textarea name="question" placeholder="Enter Question..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                
+                <div id="question-body">
+                </div>
+                <form id="respond-question-form">
+                    <h3>Add Response</h3>
+                    <input type="text" name="name" placeholder="Enter Name" maxlength="50"  required />
+                    <textarea placeholder="Enter Comment..." name="comment" required></textarea>
+                    <button type="submit">Add Response</button>
+                </form>
+            </div>
+        </main>
+    </body>
+    <script src="pro.js"></script>
+</html>
